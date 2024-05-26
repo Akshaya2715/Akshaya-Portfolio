@@ -1,0 +1,704 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* background-color: rgb(12, 10, 49); */
+  background-image: url("./assets/vac1.jpg");
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(0, 0, 0);
+}
+
+
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+
+.btn-color-2 {
+  background: rgb(14, 23, 27); /* Change this to your desired color */
+}
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+  align-items: center; 
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-decoration-color: rgb(255, 252, 252);
+}
+
+a:hover {
+  color: rgb(248, 231, 231);
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: #cbc8cb;
+}
+
+.logo {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  height: 50px; /* Adjust the height as needed */
+  width: auto;  /* Maintain aspect ratio */
+  margin-right: 1rem; /* Adjust spacing between logo and nav links */
+}
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(224, 238, 239);
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(222, 214, 219);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(243, 240, 240);
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  padding-bottom: 4vh; /* Added padding-bottom to sections */
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content:center;
+  gap: 10rem;
+  height: 80vh;
+ 
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400%;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+  padding: 5rem; /* Add padding for better spacing */
+}
+
+
+.section__text p {
+  font-weight: 800;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 20rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(33, 28, 28) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(238, 224, 224);
+  color: rgb(29, 13, 13);
+}
+
+.btn-color-1:hover {
+  background: rgb(239, 238, 238);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+.btn-color-2 {
+  background-color: #0b0d0f; /* Button background color */
+  color: #231f1f; /* Button text color */
+}
+
+.btn-color-2:hover {
+  background-color: #1c2024; /* Darker shade on hover */
+}
+
+/* ABOUT SECTION */
+
+#about {
+  background-color: #eae4e4; /* Add a light background color */
+  padding: 50px 0;
+   /* Add some padding for spacing */
+}
+
+.about-container {
+  display: flex;
+  align-items: right;
+  
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 50px;
+   /* Add some space between text and image */
+}
+
+.text-content {
+  background-color: #fff; /* Add a white background */
+  padding: 30px;
+  border-radius: 20px;
+  border-color: #6dcff6; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(2, 1, 1, 0.1);
+  border: 7px solid rgb(160, 151, 151); 
+  z-index: -1;/* Add a subtle shadow */
+}
+
+.about-text .title {
+  font-size: 3rem; /* Increase font size for the title */
+  margin-bottom: 30px; /* Add space below the title */
+}
+
+.about-pic {
+  width: 90%;
+  height: auto;
+  border-radius: 30px; /* Add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: box; /* Ensures the image behaves like a block element */
+  object-fit: fill; /* Scales the image while maintaining aspect ratio, cropping if necessary */
+}
+#about-border{
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid crimson;
+	z-index: -1;
+}
+
+/* Adjust other styles as needed */
+
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(255, 255, 255) 0.1rem solid;
+  border-color: rgb(255, 250, 250);
+  text-align: left;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+article .icon {
+  cursor: default;
+}
+
+
+/* EDUCATION SECTION */
+
+/* EDUCATION SECTION STYLES */
+/* EDUCATION SECTION STYLES */
+/* EDUCATION SECTION STYLES */
+.education-container {
+  display: flex; /* Use flexbox to create a row layout */
+  justify-content:center; /* Distribute items evenly along the row */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 2rem;
+  margin-top: 2rem; /* Adjust gap between project cards */
+  padding:20px;
+  width:100%;
+  margin-bottom: 20px; 
+}
+
+.education-card {
+  background-color: #fff; /* White background for project cards */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 40%; /* Adjust width for three columns */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:left;
+}
+.education-item {
+  flex-basis: calc(50% - 20px); /* Adjust width for two columns with gap */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+}
+
+.education-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.education-details {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.education-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.education-subsection {
+  margin-top: 10px;
+}
+
+.subsection-title {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.education-description {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/*SKILLS SECTION*/
+.progress {
+  width: 50%; /* Reduced the width by half */
+  height: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 1%;
+  height: 100%;
+  background: linear-gradient(90deg, #6dcff6, #46bdf6, #249ff7, #0077f7, #0059c4);
+  animation: flow 5s infinite linear;
+  background-size: 200% 100%;
+}
+
+.skill-item {
+  margin-bottom: 10px;
+}
+
+
+/* Additional styles for other elements */
+
+/*PROJECT SECTION*/
+.project-container {
+  display: flex; /* Use flexbox to create a row layout */
+  justify-content:center; /* Distribute items evenly along the row */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 2rem;
+  margin-top: 2rem; /* Adjust gap between project cards */
+  padding:20px;
+  width:100%;
+  margin-bottom: 30px; 
+}
+
+.project-card {
+  background-color: #fff; /* White background for project cards */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 40%; /* Adjust width for three columns */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:left;
+}
+
+/* Adjust styles for individual project cards as needed */
+
+
+.project-img {
+  width: 100%; /* Ensure image fills the container */
+  height: 100%; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.project-info {
+  width: 100%;
+}
+
+.project-title {
+  font-size: 1.5rem; /* Adjust font size */
+  margin: 10px 0;
+  text-align: center;
+}
+
+.project-description {
+  font-size: 1rem;
+    margin: 10px 0;
+}
+.btn-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0a0067; /* Button background color */
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+/* Adjust button styles as needed */
+
+/* Add any additional styles for responsiveness */
+
+
+
+
+/* CERTIFICATIONS SECTION */
+.certification-folders {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content:center;
+  margin-bottom: 20px;
+}
+
+.certification-folder {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: center; 
+}
+
+.certification-folder .folder-content {
+  padding: 20px;
+}
+
+.folder-icon {
+  width: 300px;
+  height: 300px;
+}
+
+.view-btn, .view-arrow {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e03767;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  display: inline-block;
+}
+
+.view-arrow {
+  width: 30px;
+  height: 30px;
+}
+
+.certifications-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Add some gap between certification items */
+  padding: 20px;
+}
+
+.certification-item {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 5099999999990px; /* Set a fixed width for uniformity */
+  margin: 10px;
+}
+
+.certification-img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.certification-item h3 {
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+
+/* CONTACT SECTION */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto; /* Adjust to auto to fit content */
+  padding-top: 6vh; /* Increased padding-top to create more space above */
+  margin-top: 6vh; /* Increased margin-top to create more space above */
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(253, 253, 253) 0.1rem solid;
+  border-color: rgb(255, 253, 253);
+  background: rgb(250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
