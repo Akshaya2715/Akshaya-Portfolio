@@ -16,7 +16,11 @@ body {
   background-position: center center; /* Centers the image */
   background-attachment: fixed; 
 }
-
+@keyframes animateBg {
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -292,7 +296,7 @@ section {
 /* ABOUT SECTION */
 
 #about {
-  background-color: #eae4e4; /* Add a light background color */
+ /* background-color: #eae4e4; /* Add a light background color */
   padding: 50px 0;
    /* Add some padding for spacing */
 }
@@ -403,9 +407,6 @@ article .icon {
 
 /* EDUCATION SECTION */
 
-/* EDUCATION SECTION STYLES */
-/* EDUCATION SECTION STYLES */
-/* EDUCATION SECTION STYLES */
 .education-container {
   display: flex; /* Use flexbox to create a row layout */
   justify-content:center; /* Distribute items evenly along the row */
@@ -473,26 +474,58 @@ article .icon {
 }
 
 /*SKILLS SECTION*/
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items at the start */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between; /* Space between progress bars and image */
+  align-items: flex-start; /* Align items at the start */
+}
+
+.content {
+  width: 100%; /* Adjust width for progress bars */
+}
+
+.skills-image {
+  width: 500px; 
+  height: 500px;/* Set a fixed width for the image container */
+  margin-left: 350px;
+  margin-top: 100px; /* Optional spacing */
+}
+
+.skills-pic {
+  width: 500px; 
+  height: 450px;/* Set a fixed width for the image container */
+  margin-left: 350px;
+  margin-top: 40px;
+  border-radius: 8px;  /* Add a subtle shadow */
+}
+
+/* Progress Bar Styles */
 .progress {
-  width: 50%; /* Reduced the width by half */
-  height: 20px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+  width: 200%; /* Full width of the parent */
+  height: 20px; /* Set the height of the progress bar */
+  margin-bottom: 10px; /* Space below the progress bar */
+  overflow: hidden; /* Hide overflow */
+  background-color: #f5f5f5; /* Background color */
+  border-radius: 4px; /* Rounded corners */
 }
 
 .progress-bar {
-  position: relative;
-  width: 1%;
-  height: 100%;
-  background: linear-gradient(90deg, #6dcff6, #46bdf6, #249ff7, #0077f7, #0059c4);
-  animation: flow 5s infinite linear;
-  background-size: 200% 100%;
+  position: relative; /* Position relative for inner bar */
+  height: 100%; 
+  width:90%;/* Full height */
+  background: linear-gradient(90deg, #c6339a, #720485, #cf1c7e, #fc0aa3, #ca0789 ); /* Gradient */
+  animation: flow 5s infinite linear; /* Animation */
+  background-size: 200% 100%; /* Background size for animation */
 }
 
 .skill-item {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Space between skill items */
 }
 
 
@@ -566,10 +599,6 @@ article .icon {
 .btn:hover {
   background-color: #0056b3; /* Darker shade on hover */
 }
-/* Adjust button styles as needed */
-
-/* Add any additional styles for responsiveness */
-
 
 
 
